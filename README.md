@@ -14,7 +14,7 @@ SERaaS is a Final Year Project for [Waterford Institute of Technology](https://w
 
 You can use the following commands in the terminal to run the demo;
 
-1) `git clone` - Download the repository to your computer.
+1) `git clone https://github.com/SERaaS/ReSpeaker-Audio-Extractor-Demo.git` - Download the repository to your computer.
 
 2) `cd respeaker-audio-extractor-demo` - Move to the demo folder.
 
