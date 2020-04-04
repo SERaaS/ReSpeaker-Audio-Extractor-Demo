@@ -2,7 +2,8 @@
 # By: Wei Kit Wong
 # 
 # This demo program continuously extracts audio via a USB device and
-# creates .wav files for any detected speech (5s chunks).
+# creates .wav files for any detected speech (5s chunks). This is
+# sent to the SERaaS API to output the emotions shown in the file.
 # 
 # Codebase Inspiration:
 # http://wiki.seeedstudio.com/ReSpeaker_Mic_Array_v2.0/
@@ -12,6 +13,8 @@
 import pyaudio
 import sys
 import wave
+import requests
+import seraasURLHandler
 
 """ Retrieving the USB audio device ID to perform the audio extraction """
 
@@ -84,3 +87,26 @@ wf.writeframes(b''.join(audioFrames))
 wf.close()
 
 print("fin. Outputting audio to file.")
+
+""" Making API request to SERaaS using created audio file """
+
+# Code generated using Postman, such a good tool !
+
+apiEndpointURL = seraasURLHandler.endpoint
+
+if apiEndpointURL is not None:
+  print("Making API request to SERaaS at '%s'.." % apiEndpointURL)
+
+  response = requests.request(
+    "POST",
+    apiEndpointURL,
+    headers = { "Content-Type": "application/x-www-form-urlencoded" },
+    data = {},
+    files = [ ("file", open(WAVE_OUTPUT_FILENAME, "rb")) ]
+  )
+
+  print("Got response from SERaaS:")
+  print(response.text.encode('utf8'))
+  print("fin. API request operation.")
+else:
+  print("A seraasURLHandler.py file is required for making the API request. Please read README.md for more information.")

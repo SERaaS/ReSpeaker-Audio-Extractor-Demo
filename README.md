@@ -14,10 +14,22 @@ SERaaS is a Final Year Project for [Waterford Institute of Technology](https://w
 
 You can use the following commands in the terminal to run the demo;
 
-1) `git clone` - Download the repository to your computer
+1) `git clone` - Download the repository to your computer.
 
-2) `cd respeaker-audio-extractor-demo` - Move to the demo folder
+2) `cd respeaker-audio-extractor-demo` - Move to the demo folder.
 
-2) `pip install -r requirements.txt` - Ensure you have all necessary dependencies installed (requires Python)
+2) `pip install -r requirements.txt` - Ensure you have all necessary dependencies installed (requires Python).
 
-3) `python main.py` - Run the program
+3) Create the missing files as defined below.
+
+4) `python main.py` - Run the program.
+
+### Missing Files
+
+A `./seraasURLHandler.py` file is missing from the repo that you must create before running the program.
+
+*./seraasURLHandler.py*
+```python
+# This is your own SERaaS API endpoint URL
+endpoint = "http://????/analyse/????"
+```
