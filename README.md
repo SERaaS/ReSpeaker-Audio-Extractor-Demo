@@ -28,7 +28,7 @@ You can use the following commands in the terminal to run the demo;
 
 A `./seraasURLHandler.py` file is missing from the repo that you must create before running the program.
 
-*./seraasURLHandler.py*
+`./seraasURLHandler.py`
 ```python
 # This is your own SERaaS API endpoint URL
 endpoint = "http://????/analyse/????"
