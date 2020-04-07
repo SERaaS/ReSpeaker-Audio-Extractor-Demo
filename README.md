@@ -18,11 +18,11 @@ You can use the following commands in the terminal to run the demo;
 
 2) `cd respeaker-audio-extractor-demo` - Move to the demo folder.
 
-2) `pip install -r requirements.txt` - Ensure you have all necessary dependencies installed (requires Python).
+3) `pip install -r requirements.txt` - Ensure you have all necessary dependencies installed (requires Python).
 
-3) Create the missing files as defined below.
+4) Create the missing files as defined below.
 
-4) `python main.py` - Run the program.
+5) `python main.py` - Run the program.
 
 ### Missing Files
 
